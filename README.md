@@ -112,7 +112,7 @@ The system includes:
 The system achieved:
 - Classification Accuracy: 78.94% using Sentence Transformer models.
 - Response Time: Processes 100+ questions in under 5 seconds.
-- Concurrent Users: Supports 100+ simultaneous users efficiently.
+
 --- 
 ## Conclusion
 - CognitoMap enhances automated question classification and provides actionable insights into student performance. The comparative analysis of supervised and unsupervised term weighting methods improves educational assessment accuracy.
