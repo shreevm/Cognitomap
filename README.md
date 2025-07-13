@@ -101,7 +101,7 @@ The system includes:
      npm start
 --- 
 ## Usage
-### Teachers
+### Faculties
 - Upload question papers and marks.
 - Analyze question distribution and student performance.
 ### Students:
