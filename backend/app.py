@@ -71,7 +71,6 @@ CORS(app, methods=['POST'])
 cluster_uri = f"mongodb+srv://Shreevm:Shrvm@cluster0.8hoa4jz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 client = MongoClient(cluster_uri)
-db = client["blooms"]
 
 db = client["blooms"]
 students_collection = db['students']
