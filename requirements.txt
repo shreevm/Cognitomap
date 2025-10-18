@@ -10,4 +10,4 @@ bcrypt
 pdfminer.six
 google-genai
 flask
-flask-cors
+vercel-wsgi
