@@ -23,8 +23,8 @@ from google import genai
 GOOGLE_API_KEY = 'AIzaSyC8xdLGqLiXKPA_tmcf7c0G7DF4WmyF_HU'
 
 # Configure API KEY
-client = genai.Client(api_key=GOOGLE_API_KEY)
-model_id = client.GenerativeModel('gemini-1.0-pro')
+clientAI = genai.Client(api_key=GOOGLE_API_KEY)
+
 
 app = Flask(__name__)
 
@@ -207,7 +207,10 @@ def extract_questions_and_marks(text):
     {text}
     """.format(text=text)
 
-    response = model_id.generate_content(prompt)
+       response = clientAI.models.generate_content(
+        model="gemini-1.0-pro",
+        contents=prompt
+    )
     result = response.text.strip().splitlines()
     
     return result
@@ -258,7 +261,7 @@ def store_in_mongodb():
     marks = data.get('marks')
     questionpaper_code = data.get('questionPaperCode')
 
-    client = MongoClient("mongodb://localhost:27017/")
+    client = MongoClient(cluster_uri)
     db = client["blooms"]
     collection = db["qnpaper2"]
     
@@ -743,7 +746,10 @@ def extract_questions_and_marks(text):
     {text}
     """.format(text=text)
 
-    response = model_id.generate_content(prompt)
+    response = client.models.generate_content(
+        model="gemini-1.0-pro",
+        contents=prompt
+    )
     result = response.text.strip().splitlines()
     
     return result
@@ -794,7 +800,7 @@ def store_in_mongodb():
     marks = data.get('marks')
     questionpaper_code = data.get('questionPaperCode')
 
-    client = MongoClient("mongodb://localhost:27017/")
+    client = MongoClient(cluster_uri)
     db = client["blooms"]
     collection = db["qnpaper2"]
     
