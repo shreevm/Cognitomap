@@ -9,3 +9,5 @@ pandas
 bcrypt
 pdfminer.six
 google-genai
+flask
+flask-cors
