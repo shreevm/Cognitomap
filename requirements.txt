@@ -5,3 +5,4 @@ pdfminer
 generativeai
 flask_cors
 gunicorn
+pandas
