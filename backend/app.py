@@ -12,7 +12,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pdfminer.high_level import extract_text
 import re
-import google.generativeai as palm
 import random
 import string
 from io import BytesIO
