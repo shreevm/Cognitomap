@@ -6,3 +6,4 @@ generativeai
 flask_cors
 gunicorn
 pandas
+bcrypt
