@@ -4,3 +4,4 @@ pinecone
 pdfminer
 generativeai
 flask_cors
+gunicorn
