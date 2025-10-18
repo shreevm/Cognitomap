@@ -17,14 +17,13 @@ import random
 import string
 from io import BytesIO
 from flask_cors import CORS
-
-
+from google import genai
 
 GOOGLE_API_KEY = 'AIzaSyC8xdLGqLiXKPA_tmcf7c0G7DF4WmyF_HU'
 
-# Configure API KEY 
-palm.configure(api_key=GOOGLE_API_KEY)
-model_id = palm.GenerativeModel('gemini-1.0-pro')
+# Configure API KEY
+client = genai.Client(api_key=GOOGLE_API_KEY)
+model_id = client.GenerativeModel('gemini-1.0-pro')
 
 app = Flask(__name__)
 
