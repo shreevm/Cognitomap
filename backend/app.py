@@ -17,39 +17,6 @@ import random
 import string
 from io import BytesIO
 from flask_cors import CORS
-from google import genai
-
-GOOGLE_API_KEY = 'AIzaSyC8xdLGqLiXKPA_tmcf7c0G7DF4WmyF_HU'
-
-# Configure API KEY
-client = genai.Client(api_key=GOOGLE_API_KEY)
-model_id = client.GenerativeModel('gemini-1.0-pro')
-
-app = Flask(__name__)
-
-CORS(app, methods=['POST'])
-
-# MongoDB connection
-#client = MongoClient("mongodb://localhost:27017")
-import traceback
-from flask import Flask, request, jsonify
-from pymongo import MongoClient
-import torch
-from sentence_transformers import SentenceTransformer
-from pinecone import Pinecone
-import pandas as pd
-import numpy as np
-import bcrypt
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from pdfminer.high_level import extract_text
-import re
-import google.generativeai as palm
-import random
-import string
-from io import BytesIO
-from flask_cors import CORS
 from urllib.parse import quote_plus
 
 from google import genai
