@@ -1,0 +1,13 @@
+pymongo
+sentence_transformers
+pinecone
+pdfminer
+generativeai
+flask_cors
+gunicorn
+pandas
+bcrypt
+pdfminer.six
+google-genai
+flask
+vercel-wsgi

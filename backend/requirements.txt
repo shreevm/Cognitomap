@@ -1,9 +1,0 @@
-flask
-flask-cors
-pymongo
-sentence-transformers
-pinecone-client
-bcrypt
-pdfminer.six
-google-genai
-vercel-wsgi
